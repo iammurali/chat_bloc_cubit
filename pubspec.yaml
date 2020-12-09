@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   flutter_bloc: 6.1.0
+  sizer: 1.1.8
   http: ^0.12.2
   page_transition: ^1.1.7+2
   equatable: ^1.2.5

@@ -4,7 +4,6 @@ import 'package:chat_app/core/repository_bundle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-///Provides a set of [Bloc]s and the [RepositoryBundle] globally from the root of the app
 @immutable
 class RootProvider extends StatelessWidget {
   final Widget child;
