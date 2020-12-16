@@ -1,4 +1,5 @@
 import 'package:chat_app/configuration.dart';
+import 'package:chat_app/core/app_theme.dart';
 import 'package:chat_app/core/logging_observer.dart';
 import 'package:chat_app/core/root_provider.dart';
 import 'package:chat_app/core/router.dart';
@@ -18,12 +19,12 @@ class ChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return RootProvider(
       child: LayoutBuilder(builder: (context, constraints) {
-        return OrientationBuilder(//return OrientationBuilder
-            builder: (context, orientation) {
+        return OrientationBuilder(builder: (context, orientation) {
           SizerUtil().init(constraints, orientation);
           return MaterialApp(
             title: title,
             initialRoute: Router.auth,
+            theme: AppTheme.lightTheme,
             onGenerateRoute: (RouteSettings settings) =>
                 Router.generateRoute(settings),
           );

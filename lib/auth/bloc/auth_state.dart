@@ -8,10 +8,7 @@ abstract class AuthState extends Equatable {}
 @immutable
 class InitialAuthState extends AuthState {
   @override
-  List<Object> get props => [toString()];
-
-  @override
-  String toString() => 'Initial';
+  List<Object> get props => [];
 }
 
 @immutable
@@ -28,10 +25,33 @@ class ErrorAuthState extends AuthState {
 }
 
 @immutable
+class AuthOtpSent extends AuthState {
+  AuthOtpSent();
+  @override
+  List<Object> get props => [];
+
+  @override
+  String toString() => 'OTP sent';
+}
+
+@immutable
 class LoadingAuthState extends AuthState {
   @override
   List<Object> get props => [toString()];
 
   @override
   String toString() => 'Loading';
+}
+
+@immutable
+class OTPresponseState extends AuthState {
+  final String reponseMessage;
+
+  OTPresponseState(this.reponseMessage);
+
+  @override
+  List<Object> get props => [toString()];
+
+  @override
+  String toString() => 'OTP Sent';
 }
