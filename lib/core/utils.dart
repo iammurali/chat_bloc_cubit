@@ -14,6 +14,12 @@ double setSubHeadingSize(context) {
   return customSize * unitHeightValue;
 }
 
+double setBigInfoSize(context) {
+  double unitHeightValue = MediaQuery.of(context).size.height * 0.01;
+  double customSize = 2.5;
+  return customSize * unitHeightValue;
+}
+
 TextStyle headerStyle(context) {
   return TextStyle(
       color: Color.fromRGBO(12, 172, 101, 1),
@@ -25,6 +31,13 @@ TextStyle subHeadingStyle(context) {
   return TextStyle(
       color: Colors.black54,
       fontSize: setSubHeadingSize(context),
+      fontWeight: FontWeight.w800);
+}
+
+TextStyle bigInfoTextStyle(context) {
+  return TextStyle(
+      color: Colors.black87,
+      fontSize: setBigInfoSize(context),
       fontWeight: FontWeight.w800);
 }
 

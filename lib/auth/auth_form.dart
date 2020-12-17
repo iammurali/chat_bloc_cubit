@@ -17,8 +17,6 @@ class MobileNumberForm extends StatelessWidget {
     return Container(
       child: BlocBuilder<AuthBloc, AuthState>(
           builder: (BuildContext context, AuthState state) {
-        print(state);
-
         return mobileNumberForm(context);
       }),
     );

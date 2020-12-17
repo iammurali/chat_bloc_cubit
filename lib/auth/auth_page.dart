@@ -6,6 +6,7 @@ import 'package:sizer/sizer.dart';
 import 'package:chat_app/auth/auth_form.dart';
 import 'package:chat_app/core/utils.dart';
 
+/// Handles both [MobileNumberInput] and [OtpVerify] logic
 class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,17 +20,63 @@ class AuthPage extends StatelessWidget {
             if (state is InitialAuthState) {
               return MobileNumberInput();
             } else if (state is AuthOtpSent) {
-              return Container(
-                child: Center(
-                  child: Text('test'),
-                ),
-              );
+              return OtpForm();
             } else {
               return MobileNumberInput();
             }
           },
         ),
       )),
+    );
+  }
+}
+
+class OtpForm extends StatelessWidget {
+  const OtpForm({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Column(
+      children: [
+        buildHeader(context),
+        Container(
+          height: 47.0.h,
+          width: 100.0.h,
+          child: Text('test'),
+        ),
+      ],
+    ));
+  }
+
+  /// Method builds Header text
+  Container buildHeader(context) {
+    return Container(
+      height: 30.0.h,
+      width: 100.0.h,
+      child: Padding(
+        padding: EdgeInsets.all(3.0.h),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Verify your mobile',
+                style: headerStyle(context),
+              ),
+              Text(
+                'Enter the verification code sent to',
+                style: subHeadingStyle(context),
+              ),
+              Padding(padding: EdgeInsets.only(top: 2.0.h)),
+              Text(
+                '9176769136',
+                style: bigInfoTextStyle(context),
+              )
+            ]),
+      ),
     );
   }
 }
@@ -52,7 +99,7 @@ class MobileNumberInput extends StatelessWidget {
     );
   }
 
-// Build Header
+  /// Build Header
   Container buildHeader(context) {
     return Container(
       height: 30.0.h,

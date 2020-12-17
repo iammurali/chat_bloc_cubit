@@ -33,3 +33,9 @@ class ChatApp extends StatelessWidget {
     );
   }
 }
+
+/// TODO:
+//  Create a http api class that calls api
+//  Create a chat list page
+//  Implement socket connection
+//  Create chat based on socket connection
