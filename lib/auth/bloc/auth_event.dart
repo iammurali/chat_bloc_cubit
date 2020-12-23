@@ -9,3 +9,8 @@ class AuthFormSubmit extends AuthEvent {
   @override
   List<Object> get props => [];
 }
+
+class VerifyOtp extends AuthEvent {
+  @override
+  List<Object> get props => [];
+}

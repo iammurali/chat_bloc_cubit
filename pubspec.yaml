@@ -24,7 +24,7 @@ dependencies:
   flutter_bloc: 6.1.0
   sizer: 1.1.8
   http: ^0.12.2
-  pin_entry_text_field: 0.1.4
+  pin_code_text_field: ^1.7.1
   page_transition: ^1.1.7+2
   equatable: ^1.2.5
   flutter:
@@ -67,10 +67,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Nunito
+    - family: Poppins
       fonts:
-        - asset: fonts/Nunito-Regular.ttf
-        - asset: fonts/Nunito-Bold.ttf
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-SemiBold.ttf
+        - asset: fonts/Poppins-ExtraLight.ttf
+        - asset: fonts/Poppins-Light.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

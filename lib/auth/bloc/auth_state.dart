@@ -26,9 +26,20 @@ class ErrorAuthState extends AuthState {
 
 @immutable
 class AuthOtpSent extends AuthState {
-  AuthOtpSent();
+  final bool hasError;
+  final String errorMessage;
+
+  AuthOtpSent(
+      {this.hasError: false, this.errorMessage: "something went wrong.!"});
+
+  AuthOtpSent copyWith({hasError, errorMessage}) {
+    return AuthOtpSent(
+        hasError: hasError ?? this.hasError,
+        errorMessage: errorMessage ?? this.errorMessage);
+  }
+
   @override
-  List<Object> get props => [];
+  List<Object> get props => [hasError, errorMessage];
 
   @override
   String toString() => 'OTP sent';
@@ -44,11 +55,8 @@ class LoadingAuthState extends AuthState {
 }
 
 @immutable
-class OTPresponseState extends AuthState {
-  final String reponseMessage;
-
-  OTPresponseState(this.reponseMessage);
-
+class OtpVerifiedState extends AuthState {
+  OtpVerifiedState();
   @override
   List<Object> get props => [toString()];
 

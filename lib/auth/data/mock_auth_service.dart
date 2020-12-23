@@ -10,5 +10,8 @@ class MockAuthService extends BaseAuthService {
   Future<List<dynamic>> post(dynamic input) async => _authresponse;
 
   @override
-  Future<List<dynamic>> sendOtp(dynamic input) async => _authresponse;
+  Future sendOtp(dynamic input) async => _authresponse;
+
+  @override
+  Future verifyOtp(input) async => _authresponse;
 }

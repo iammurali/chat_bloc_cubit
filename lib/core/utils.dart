@@ -1,7 +1,10 @@
 import 'dart:ui';
 
+import 'package:chat_app/core/app_theme.dart';
 import 'package:flutter/Material.dart';
 
+// TODO: Move To Theme Styles
+// Text style
 double setHeaderSize(context) {
   double unitHeightValue = MediaQuery.of(context).size.height * 0.01;
   double customSize = 4.5;
@@ -22,28 +25,27 @@ double setBigInfoSize(context) {
 
 TextStyle headerStyle(context) {
   return TextStyle(
-      color: Color.fromRGBO(12, 172, 101, 1),
+      color: AppTheme.primary,
       fontSize: setHeaderSize(context),
       fontWeight: FontWeight.w600);
 }
 
 TextStyle subHeadingStyle(context) {
   return TextStyle(
-      color: Colors.black54,
+      // color: Colors.black54,
+      color: Theme.of(context).secondaryHeaderColor,
       fontSize: setSubHeadingSize(context),
       fontWeight: FontWeight.w800);
 }
 
 TextStyle bigInfoTextStyle(context) {
   return TextStyle(
-      color: Colors.black87,
+      color: Theme.of(context).secondaryHeaderColor,
       fontSize: setBigInfoSize(context),
       fontWeight: FontWeight.w800);
 }
 
 // FORM STYLES
-
-// size 4
 double formLabelSize(context) {
   double unitHeightValue = MediaQuery.of(context).size.height * 0.01;
   double customSize = 4;
@@ -58,20 +60,19 @@ double formTextSize(context) {
 
 TextStyle formLabelStyle(context) {
   return TextStyle(
-      color: Color.fromRGBO(12, 172, 101, 1),
+      color: AppTheme.primary,
       fontSize: formLabelSize(context),
       fontWeight: FontWeight.w600);
 }
 
 TextStyle formText(context) {
   return TextStyle(
-      color: Colors.black87,
+      color: Colors.white,
       fontSize: formTextSize(context),
       fontWeight: FontWeight.w600);
 }
 
 // form decoration
-
 InputDecoration formDecoration(
     BuildContext context, String hintText, String labelText) {
   return InputDecoration(
@@ -89,4 +90,16 @@ InputDecoration formDecoration(
       errorBorder: InputBorder.none,
       disabledBorder: InputBorder.none,
       border: InputBorder.none);
+}
+
+/// getColorfrom(#FFFFFF) hex
+// ignore: missing_return
+Color getColorFromHex(String hexColor) {
+  hexColor = hexColor.replaceAll("#", "");
+  if (hexColor.length == 6) {
+    hexColor = "FF" + hexColor;
+  }
+  if (hexColor.length == 8) {
+    return Color(int.parse("0x$hexColor"));
+  }
 }

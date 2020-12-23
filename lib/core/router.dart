@@ -1,9 +1,10 @@
 import 'package:chat_app/auth/auth_page.dart';
+import 'package:chat_app/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Router {
-  static const String home = '/';
+  static const String home = '/home';
   static const String auth = '/auth';
 
   ///Generates a [List] of named [PageRoute]s
@@ -12,6 +13,12 @@ class Router {
       case auth:
         return PageTransition(
           child: AuthPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
+      case home:
+        return PageTransition(
+          child: HomePage(),
           type: PageTransitionType.fade,
           settings: settings,
         );

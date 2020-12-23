@@ -14,4 +14,7 @@ class AuthService extends BaseAuthService {
 
   @override
   Future sendOtp(dynamic input) async => _authresponse;
+
+  @override
+  Future verifyOtp(input) async => _authresponse;
 }

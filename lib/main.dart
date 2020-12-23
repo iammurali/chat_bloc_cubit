@@ -24,7 +24,7 @@ class ChatApp extends StatelessWidget {
           return MaterialApp(
             title: title,
             initialRoute: Router.auth,
-            theme: AppTheme.lightTheme,
+            theme: AppTheme.darkTheme,
             onGenerateRoute: (RouteSettings settings) =>
                 Router.generateRoute(settings),
           );
@@ -35,6 +35,7 @@ class ChatApp extends StatelessWidget {
 }
 
 /// TODO:
+//  Implement bloc for otp verify
 //  Create a http api class that calls api
 //  Create a chat list page
 //  Implement socket connection

@@ -1,7 +1,6 @@
 import 'package:chat_app/auth/bloc/auth_event.dart';
 import 'package:chat_app/auth/bloc/auth_state.dart';
 import 'package:chat_app/auth/data/base_auth_service.dart';
-import 'package:chat_app/core/service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,6 +19,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       } catch (e) {
         yield ErrorAuthState(e.toString());
       }
+    } else if (event is VerifyOtp) {
+      try {
+        yield await _verifyOTP();
+      } catch (e) {
+        yield ErrorAuthState(e.toString());
+      }
     }
   }
 
@@ -27,5 +32,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     const currentSearch = 'rest';
     dynamic newState = await _authService.sendOtp(currentSearch);
     return AuthOtpSent();
+  }
+
+  Future<AuthState> _verifyOTP() async {
+    const currentSearch = 'rest';
+    print('TESTTTTTTTT');
+    dynamic newState = await _authService.verifyOtp(currentSearch);
+    return OtpVerifiedState();
   }
 }

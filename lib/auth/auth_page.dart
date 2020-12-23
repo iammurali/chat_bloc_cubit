@@ -45,7 +45,7 @@ class OtpForm extends StatelessWidget {
         Container(
           height: 47.0.h,
           width: 100.0.h,
-          child: Text('test'),
+          child: OtpInputForm(47.0.h),
         ),
       ],
     ));
@@ -81,7 +81,12 @@ class OtpForm extends StatelessWidget {
   }
 }
 
-class MobileNumberInput extends StatelessWidget {
+class MobileNumberInput extends StatefulWidget {
+  @override
+  _MobileNumberInputState createState() => _MobileNumberInputState();
+}
+
+class _MobileNumberInputState extends State<MobileNumberInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -123,7 +128,6 @@ class MobileNumberInput extends StatelessWidget {
     );
   }
 
-  //  Build Foo
   Container buildFooter(BuildContext context) {
     return Container(
       height: 20.0.h,
