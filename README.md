@@ -1,16 +1,13 @@
 # chat_app
 
-A new Flutter project.
+I built this flutter app for people to contribute and make some production ready suggestions inside the app
 
-## Getting Started
+the level abstraction created in the following app is what i felt to be sufficient to my needs
+your mileage may vary
 
-This project is a starting point for a Flutter application.
+Buy me a coffee: https://www.buymeacoffee.com/purifiedcode
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+My laptop: https://amzn.to/3rShQHw
+keyboard and mouse: https://amzn.to/38OtB98
