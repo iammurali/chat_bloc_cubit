@@ -4,8 +4,7 @@ import 'package:sizer/sizer.dart';
 class AppTheme {
   static const Color _primary = Color(0XFFFF3100);
   static const Color primary = Color(0XFFFF3100);
-  static const Color _accent = Color.fromRGBO(0, 102, 51, 1);
-  static const Color _lightGray = Color.fromRGBO(224, 224, 224, 1);
+
   AppTheme._();
 
   static final ThemeData lightTheme = ThemeData(
@@ -26,7 +25,7 @@ class AppTheme {
 
   static final ThemeData darkTheme = ThemeData(
       scaffoldBackgroundColor: Color(0XFF1C1C1C),
-      fontFamily: 'Nunito',
+      fontFamily: 'Poppins',
       textTheme: _buildDarkTextTheme(),
       primaryTextTheme: _buildDarkTextTheme(),
       accentTextTheme: _buildDarkTextTheme(),
@@ -59,23 +58,18 @@ class AppTheme {
       bodyText2: TextStyle(),
       bodyText1: TextStyle(),
       headline6: TextStyle(),
-      // can be used for tabs
-      headline5: TextStyle(
-        fontSize: 13.0.sp,
-        fontWeight: FontWeight.w600,
-      ),
+      headline5: TextStyle(),
       headline4: TextStyle(),
       headline3: TextStyle(),
-      headline2: TextStyle(color: Colors.white),
+      headline2: TextStyle(),
       headline1: TextStyle(),
       button: TextStyle(
         fontSize: 14.0.sp,
-        color: Colors.white,
       ),
       caption: TextStyle(
         fontSize: 12.0.sp,
       ),
-    );
+    ).apply(bodyColor: Colors.white);
   }
 }
 
@@ -90,9 +84,8 @@ extension CustomStyles on TextTheme {
 
   TextStyle get unselectedHeadline5 {
     return TextStyle(
-        color: Colors.black54,
-        fontSize: 13.0.sp,
-        fontWeight: FontWeight.w600,
-        fontFamily: 'Poppins-SemiBold');
+      color: Colors.black54,
+      fontSize: 13.0.sp,
+    );
   }
 }

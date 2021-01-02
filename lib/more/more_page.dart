@@ -1,3 +1,4 @@
+import 'package:chat_app/core/components/page_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class MorePage extends StatefulWidget {
@@ -8,6 +9,6 @@ class MorePage extends StatefulWidget {
 class _MorePageState extends State<MorePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return PageWrapper();
   }
 }

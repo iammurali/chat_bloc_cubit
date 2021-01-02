@@ -63,13 +63,12 @@ class AppTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new TabBar(
-      dragStartBehavior: DragStartBehavior.down,
       indicatorSize: TabBarIndicatorSize.label,
       indicatorPadding: EdgeInsets.zero,
       indicatorColor: Colors.white,
       indicatorWeight: 2.0,
       unselectedLabelStyle: Theme.of(context).textTheme.unselectedHeadline5,
-      labelStyle: Theme.of(context).textTheme.headline6,
+      labelStyle: Theme.of(context).textTheme.subtitle1,
       tabs: _kTabs,
     );
   }

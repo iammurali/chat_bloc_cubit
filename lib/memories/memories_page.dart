@@ -10,22 +10,10 @@ class _MemoriesPageState extends State<MemoriesPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.blueAccent,
+      color: Colors.blueAccent,
       child: Center(
         child: Column(
           children: [
-            Text(
-              'Headline 2',
-              style: Theme.of(context).textTheme.headline2,
-            ),
-            Text(
-              'Headline 3',
-              style: Theme.of(context).textTheme.headline3,
-            ),
-            Text(
-              'Headline 4',
-              style: Theme.of(context).textTheme.headline4,
-            ),
             Text(
               'Headline 5',
               style: Theme.of(context).textTheme.headline5,

@@ -92,7 +92,7 @@ class ChatMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: 12.0,
+        vertical: 5.0,
         horizontal: 24.0,
       ),
       child: Column(
@@ -115,21 +115,28 @@ class ChatMessage extends StatelessWidget {
               vertical: 12.0,
               horizontal: 16.0,
             ),
-            child: Text(
-              message ?? "Message here...",
-              style: TextStyle(
-                  color: textColor ?? messageTextColor(context),
-                  fontSize: 16.0,
-                  // fontWeight: FontWeight.w500,
-                  fontFamily: 'Poppins'),
+            child: Column(
+              crossAxisAlignment: messageType == null
+                  ? CrossAxisAlignment.start
+                  : messageType == MessageType.received
+                      ? CrossAxisAlignment.start
+                      : CrossAxisAlignment.end,
+              children: [
+                Text(
+                  message ?? "Message here...",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      .copyWith(color: textColor ?? messageTextColor(context)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 0.0,
+                  ),
+                  child: messageTime(),
+                ),
+              ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 4.0,
-              horizontal: 12.0,
-            ),
-            child: messageTime(),
           ),
         ],
       ),

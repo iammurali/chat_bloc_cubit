@@ -24,18 +24,12 @@ double setBigInfoSize(context) {
 }
 
 TextStyle headerStyle(context) {
-  return TextStyle(
-      color: AppTheme.primary,
-      fontSize: setHeaderSize(context),
-      fontWeight: FontWeight.w600);
+  return Theme.of(context).textTheme.headline5.copyWith(
+      color: Theme.of(context).primaryColor, fontWeight: FontWeight.w800);
 }
 
 TextStyle subHeadingStyle(context) {
-  return TextStyle(
-      // color: Colors.black54,
-      color: Theme.of(context).secondaryHeaderColor,
-      fontSize: setSubHeadingSize(context),
-      fontWeight: FontWeight.w800);
+  return Theme.of(context).textTheme.subtitle2;
 }
 
 TextStyle bigInfoTextStyle(context) {
@@ -77,14 +71,16 @@ InputDecoration formDecoration(
     BuildContext context, String hintText, String labelText) {
   return InputDecoration(
       hintStyle: TextStyle(
+        color: Colors.white70,
         height: 2.0, // sets the distance between label and input
       ),
-      hintText: '',
+      hintText: hintText,
       labelText: labelText,
       contentPadding: EdgeInsets.symmetric(
           vertical: 10), //Change this value to custom as you like
       isDense: true,
-      labelStyle: formLabelStyle(context),
+      labelStyle: Theme.of(context).textTheme.headline5.copyWith(
+          color: Theme.of(context).primaryColor, fontWeight: FontWeight.w800),
       focusedBorder: InputBorder.none,
       enabledBorder: InputBorder.none,
       errorBorder: InputBorder.none,

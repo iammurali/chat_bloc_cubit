@@ -46,7 +46,7 @@ class _MobileNumberFormState extends State<MobileNumberForm> {
             children: [
               TextFormField(
                 decoration: formDecoration(context, 'Country', 'Country'),
-                style: formText(context),
+                style: Theme.of(context).textTheme.headline5,
                 initialValue: 'India (+91)',
                 keyboardType: TextInputType.number,
                 // enabled: false,
@@ -62,7 +62,7 @@ class _MobileNumberFormState extends State<MobileNumberForm> {
                 keyboardType: TextInputType.number,
                 decoration:
                     formDecoration(context, 'Mobile number', 'Mobile number'),
-                style: formText(context),
+                style: Theme.of(context).textTheme.headline5,
                 initialValue: '9176769136',
                 validator: validatePhone,
               ),

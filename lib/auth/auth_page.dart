@@ -94,7 +94,7 @@ class _MobileNumberInputState extends State<MobileNumberInput> {
         children: [
           buildHeader(context),
           Container(
-            height: 47.0.h,
+            height: 46.0.h,
             width: 100.0.h,
             child: MobileNumberForm(47.0.h),
           ),
@@ -136,7 +136,7 @@ class _MobileNumberInputState extends State<MobileNumberInput> {
         child: Column(children: [
           Text(
             'We will never spam or share your number \n                           with anyone',
-            style: subHeadingStyle(context),
+            style: Theme.of(context).textTheme.subtitle2,
           )
         ]),
       ),
