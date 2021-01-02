@@ -6,7 +6,5 @@ your mileage may vary
 
 Buy me a coffee: https://www.buymeacoffee.com/purifiedcode
 
-
-
 My laptop: https://amzn.to/3rShQHw
 keyboard and mouse: https://amzn.to/38OtB98
